@@ -1,0 +1,59 @@
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #091921;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock {
+  width: 400px;
+  height: 400px;
+  background-color: #727472;
+  border-radius: 50%;
+  border: 8px solid #000;
+  background-image: url('../img/face.png');
+  background-size: cover;
+  position: relative;
+  box-shadow: 0 -15px 15px rgb(255, 255, 255 , 0.05),
+             inset 0 -15px 15px rgb(255, 255, 255 , 0.05),
+             0 15px 15px rgb(0, 0, 0 , 0.5),
+             inset 0 15px 15px rgb(0, 0, 0 , 0.5);
+}
+.clock::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  transform-origin: bottom;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.hour {
+  width: 8px;
+  height: 28%;
+  background-color: #ff105e;
+}
+.minute {
+  width: 5px;
+  height: 38%;
+  background-color: rgb(199, 188, 188);
+}
+.second {
+  width: 3px;
+  height: 40%;
+  background-color: #fff;
+}
